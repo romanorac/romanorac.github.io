@@ -6,7 +6,7 @@ permalink: /about/
 
 <img src="{{ site.url }}/assets/about_profile.png" 
      alt="Roman Orac profile" 
-     style="width: 120px; margin:20px 50px"
+     style="width: 120px; margin:10px 50px"
      align="right"/>
 
 Having many lines of unstructured code on my laptop is no use to anyone.
