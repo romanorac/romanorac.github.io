@@ -1,22 +1,27 @@
 ---
 layout: post
-title:  "Cryptocurrency Analysis with Python - part 1"
+title:  "Cryptocurrency Analysis with Python - MACD"
 categories: cryptocurrency analysis
 ---
 
 Cryptocurrencies are becoming mainstream so I've decided to spend the weekend learning about it. 
 I've hacked together the 
-[code](https://github.com/romanorac/romanorac.github.io/blob/master/assets/notebooks/2017-12-10-cryptocurrency-analysis-with-python-part1.ipynb)
+[code]({{site.url}}/assets/notebooks/2017-12-17-cryptocurrency-analysis-with-python-part1.ipynb)
 to download daily Bitcoin prices and apply a simple trading strategy to it. 
-
-In my next blog post, I plan to implement strategy testing. Interested? Let me know in the comments below.
 
 Note that there already exists tools for performing this kind of analysis, eg. 
 [tradeview](https://www.tradingview.com/), but this way enables more in-depth analysis.
 
+Check out my [next blog post]({{site.url}}/cryptocurrency/analysis/2017/12/25/cryptocurrency-analysis-with-python-part2.html), 
+where I describe buy and hold strategy and follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
+
+
 <div align="middle">
-<img src="https://raw.githubusercontent.com/romanorac/romanorac.github.io/master/assets/2017-12-10-visualizing_trading_strategy.gif" alt="Visualizing Trading Strategy Animation">
+<img src="{{site.url}}/assets/2017-12-10-visualizing_trading_strategy.gif" alt="Visualizing Trading Strategy Animation">
 </div>
+
+## Disclaimer
+I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
 
 ## Requirements
 
@@ -38,7 +43,7 @@ We download daily Bitcoin data in USD on Bitstamp exchange. [Other exchanges](ht
 ```python
 from_symbol = 'BTC'
 to_symbol = 'USD'
-exchange = 'BitStamp'
+exchange = 'Bitstamp'
 datetime_interval = 'day'
 ```
 
@@ -55,16 +60,17 @@ We download the data and store it to a file.
 
 ```python
 import requests
+from datetime import datetime
 
 
-def get_filename(from_symbol, to_symbol, exchange):
-    return '%s_%s_%s.csv' % (from_symbol, to_symbol, exchange)
+def get_filename(from_symbol, to_symbol, exchange, datetime_interval, download_date):
+    return '%s_%s_%s_%s_%s.csv' % (from_symbol, to_symbol, exchange, datetime_interval, download_date)
 
 
 def download_data(from_symbol, to_symbol, exchange, datetime_interval):
     supported_intervals = {'minute', 'hour', 'day'}
     assert datetime_interval in supported_intervals,\
-           'datetime_interval should be one of %s' % supported_intervals
+        'datetime_interval should be one of %s' % supported_intervals
 
     print('Downloading %s trading data for %s %s from %s' %
           (datetime_interval, from_symbol, to_symbol, exchange))
@@ -98,14 +104,15 @@ data = download_data(from_symbol, to_symbol, exchange, datetime_interval)
 df = convert_to_dataframe(data)
 df = filter_empty_datapoints(df)
 
-filename = get_filename(from_symbol, to_symbol, exchange)
+current_datetime = datetime.now().date().isoformat()
+filename = get_filename(from_symbol, to_symbol, exchange, datetime_interval, current_datetime)
 print('Saving data to %s' % filename)
 df.to_csv(filename, index=False)
 ```
 
-    Downloading day trading data for BTC USD from BitStamp
-    Filtering 885 empty datapoints
-    Saving data to BTC_USD_BitStamp.csv
+    Downloading day trading data for BTC USD from Bitstamp
+    Filtering 877 empty datapoints
+    Saving data to BTC_USD_Bitstamp_day_2017-12-25.csv
 
 
 ## Read the data
@@ -116,16 +123,20 @@ We read the data from a file so we don't need to download it again.
 ```python
 import pandas as pd
 
-filename = get_filename(from_symbol, to_symbol, exchange)
-print('Reading data from %s' % filename)
-df = pd.read_csv(filename)
+def read_dataset(filename):
+    print('Reading data from %s' % filename)
+    df = pd.read_csv(filename)
+    df.datetime = pd.to_datetime(df.datetime) # change type from object to datetime
+    df = df.set_index('datetime') 
+    df = df.sort_index() # sort by datetime
+    print(df.shape)
+    return df
 
-df.datetime = pd.to_datetime(df.datetime) # change type from object to datetime
-df = df.set_index('datetime') 
-df = df.sort_index() # sort by datetime
+df = read_dataset(filename)
 ```
 
-    Reading data from BTC_USD_BitStamp.csv
+    Reading data from BTC_USD_Bitstamp_day_2017-12-25.csv
+    (1124, 6)
 
 
 ##  Trading strategy
@@ -172,7 +183,7 @@ df.head()
 
 
 <div style="overflow-x:scroll;">
-<table border="1">
+<table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -342,6 +353,3 @@ show(p)
 ```
 
 {% include 2017-12-10-visualizing_trading_strategy.html %}
-
-## Disclaimer
-I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
