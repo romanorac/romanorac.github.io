@@ -21,3 +21,5 @@ Currently, I am helping 1tap by Receipt Bank to build "smarter" products using M
 I am interested in Deep Learning, data visualizations and I love Vim.
 When I am not coding I like to go the seaside, skiing in the winter...
 away from computers 😊
+
+Follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
