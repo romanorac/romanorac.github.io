@@ -21,7 +21,11 @@ where I describe buy and hold strategy and follow me on [twitter](https://twitte
 </div>
 
 ## Disclaimer
-I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
+<span style="color:red">
+**I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
+The conclusion here can be misleading as I analyze the time period with immense growth. 
+Experts agree that cryptocurrencies are a [bubble](https://www.forbes.com/sites/investor/2017/09/18/cryptocurrency-is-a-bubble-whats-next/#3953479a2cb8).**
+</span>
 
 ## Requirements
 

@@ -7,6 +7,7 @@ categories: cryptocurrency analysis
 
 In this part, I am going to analyze which coin (**Bitcoin**, **Ethereum** or **Litecoin**) was the most profitable in last two months using buy and hold strategy. 
 We'll go through the analysis of these 3 cryptocurrencies and try to give an objective answer.
+
 You can run this code by downloading this [Jupyter notebook]({{site.url}}/assets/notebooks/2017-12-25-cryptocurrency-analysis-with-python-part2.ipynb).
     
 Follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
@@ -19,7 +20,11 @@ Follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
 </div>
 
 ## Disclaimer
-I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
+<span style="color:red">
+**I am not a trader and this blog post is not a financial advice. This is purely introductory knowledge.
+The conclusion here can be misleading as I analyze the time period with immense growth. 
+Experts agree that cryptocurrencies are a [bubble](https://www.forbes.com/sites/investor/2017/09/18/cryptocurrency-is-a-bubble-whats-next/#3953479a2cb8).**
+</span>
 
 ## Requirements
 
