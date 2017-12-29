@@ -37,7 +37,7 @@ in this series.
 
 To get the latest data, go to [previous blog post]({{site.url}}/cryptocurrency/analysis/2017/12/17/cryptocurrency-analysis-with-python-part1.html),
 where I described how to download it using Cryptocompare API.
-You can also use the [data]({{site.url}}/assets/data/) I work with in this example.
+You can also use the [data](https://github.com/romanorac/romanorac.github.io/tree/master/assets/data) I work with in this example.
 
 First, we download hourly data for BTC, ETH and LTC from Coinbase exchange.
 This time we work with hourly time interval as it has higher granularity.

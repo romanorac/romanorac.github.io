@@ -7,7 +7,7 @@ categories: cryptocurrency analysis
 
 In [previous post]({{site.url}}/cryptocurrency/analysis/2017/12/25/cryptocurrency-analysis-with-python-part2.html), we analyzed raw price changes of cryptocurrencies. The problem with that approach is that prices of different cryptocurrencies are not normalized and we cannot use comparable metrics. 
 
-In this post, we describe benefits of using log returns for analysis of price changes. You can download this [Jupyter Notebook]({{site.url}}/assets/notebooks/2017-12-29-cryptocurrency-analysis-with-python-part3.ipynb) and the [data]({{site.url}}/assets/data/). 
+In this post, we describe benefits of using log returns for analysis of price changes. You can download this [Jupyter Notebook]({{site.url}}/assets/notebooks/2017-12-29-cryptocurrency-analysis-with-python-part3.ipynb) and the [data](https://github.com/romanorac/romanorac.github.io/tree/master/assets/data). 
 
 Follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
 
