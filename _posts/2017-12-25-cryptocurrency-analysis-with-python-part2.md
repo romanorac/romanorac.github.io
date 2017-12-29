@@ -434,6 +434,8 @@ Correlation matrix is symmetric so we only show the lower half.
 [Sifr Data](https://www.sifrdata.com/cryptocurrency-correlation-matrix/) daily updates Pearson correlations for many cryptocurrencies.
 
 **Observations**
+- **Closing prices aren't normalized, see [Log Returns]({{site.url}}/cryptocurrency/analysis/2017/12/29/cryptocurrency-analysis-with-python-part3.html),
+where we normalize closing prices before calculating correlation**,
 - BTC, ETH and LTC were highly correlated in past 2 months. This means, when BTC closing price increased, ETH and LTC followed. 
 - ETH and LTC were even more correlated with 0.9565 Pearson correlation coefficient.
 
