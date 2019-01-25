@@ -18,4 +18,4 @@ data analytics you'll find interesting reads on this blog.
 I am Roman Orac and I am a data scientist for a few years now.
 I am interested in Deep Learning, data visualizations and I love Vim.
 
-Follow me on [twitter](https://twitter.com/romanorac) to get latest updates.
+You can [follow me](https://twitter.com/romanorac) on Twitter. Let's also connect on [LinkedIn](https://www.linkedin.com/in/romanorac/).
