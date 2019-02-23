@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.url }}/assets/about_profile.png" 
+<img src="{{ site.url }}/assets/about_profile.jpg" 
      alt="Roman Orac profile" 
-     style="width: 120px; margin:10px 50px"
+     style="width: 200px; margin: 0px 50px"
      align="right"/>
 
 Having many lines of unstructured code on my laptop is no use to anyone.
