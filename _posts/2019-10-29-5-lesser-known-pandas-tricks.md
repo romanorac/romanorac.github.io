@@ -30,6 +30,17 @@ import pandas as pd
 import xlsxwriter
 ```
 
+<b>Here are a few links you might be interested in</b>:
+
+- [Intro to Machine Learning](https://imp.i115008.net/c/2402645/788201/11298)
+- [Intro to Programming](https://imp.i115008.net/c/2402645/788200/11298)
+- [Data Science for Business Leaders](https://imp.i115008.net/c/2402645/880006/11298)
+- [AI for Healthcare](https://imp.i115008.net/c/2402645/824078/11298)
+- [Autonomous Systems](https://imp.i115008.net/c/2402645/829912/11298)
+- [Learn SQL](https://imp.i115008.net/c/2402645/828338/11298)
+
+Disclosure: Bear in mind that some of the links above are affiliate links and if you go through them to make a purchase I will earn a commission. Keep in mind that I link courses because of their quality and not because of the commission I receive from your purchases. The decision is yours, and whether or not you decide to buy something is completely up to you.
+
 ## Setup
 
 
