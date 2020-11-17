@@ -1,11 +1,14 @@
 ---
 layout: post
-title:  "Data Science Is Fun - a Hands-on Data Science Course"
+title:  "Your First Machine Learning Model in the Cloud"
 use_math: true
 ---
 
-Data Science is a Hands-on Data Science Course. 
+A step-by-step guide that will show you how to train a Machine Learning model, build a Web Application and deploy it to the Cloud.
 
-You get a 60 pages PDF with 10 Jupyter Notebooks to help you put your 1st Machine Learning model in production.
+You will learn how to train a Machine Learning model that predicts “How would an article perform on a Data Science blog” based on its title.
 
-[Try It Before You Buy It](https://datascienceisfun.net/)
+[Your First Machine Learning Model in the Cloud](https://gumroad.com/l/mjyDQ).
+
+
+
